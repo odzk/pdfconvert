@@ -16,9 +16,8 @@
    
    <tbody>
       <% @pdf.each do |pdf| %>
-         
          <tr>
-            <td><%= pdf.name %></td>
+            <td><%= pdf.attachment %></td>
             <td><%= pdf.created_at %></td>
             <td class="text-center"><span class="label label-primary">New</span></td>
             <td class="text-center"><%= button_to "Delete",  pdf, method: :delete, class: "btn btn-danger", disabled: "", confirm: "Are you sure that you wish to delete #{pdf.name}?" %></td>

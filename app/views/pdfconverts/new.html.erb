@@ -10,10 +10,18 @@
    </div>
 <% end %>
 
-<div class = "well">
+<div class = "col-md-6">
+   <h4 class="text-center">Multiple File Upload</h4>
    <%= form_for @pdf, html: { multipart: true, class: "dropzone" } do |f| %>
-      <%#= f.label :attachment %>
-      <%#= f.file_field :attachment %>
-      <%#= f.submit "Save", class: "btn btn-primary" %>
    <% end %>
 </div>
+
+<div class = "col-md-6">
+   <h4 class="text-center">Singe File Upload</h4>
+   <%= form_for @pdf, html: { multipart: true, class: "form-group" } do |f| %>
+      <%= f.label :attachment, class: "form-control" %>
+      <%= f.file_field :attachment, class: "form-control" %>
+      <%= f.submit "Save", class: "btn btn-primary", style: "margin-top: 20px" %>
+   <% end %>
+</div>
+

@@ -9,7 +9,7 @@ class PdfconvertsController < ApplicationController
 
   def create
   	@pdf = Pdfconvert.new(pdf_params)
-
+    
   	if @pdf.save
   		redirect_to '/', notice: "The file #{@pdf.name} has been successfully uploaded!"
   	else
