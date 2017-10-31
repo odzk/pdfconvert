@@ -3,7 +3,8 @@
       <%= flash[:notice] %>
    </div>
 <% end %>
-<h1>PDF</h1>
+
+<h1>EXCEL</h1>
 
 
 <table class = "table table-bordered table-striped">
@@ -17,23 +18,23 @@
    </thead>
    
    <tbody>
-      <% @pdfconverts.each do |pdfconvert| %>
+      <% @pdfgets.each do |pdfget| %>
          <tr>
-            <td><%= pdfconvert.id %></td>
+            <td><%= pdfget.id %></td>
             
             
-            <td><%= pdfconvert.created_at.strftime("%m/%d") %></td>
+            <td><%= pdfget.created_at.strftime("%m/%d") %></td>
             
             
             <td>
-               <% if pdfconvert.status == "done" %>
+               <% if pdfget.status == "done" %>
                
                <div style="color:white; background-color:green;">
-               <%= pdfconvert.status %>
+               <%= pdfget.status %>
             </div>
             <% else %>
             
-            <div style="color:white; background-color:red;">
+               <div style="color:white; background-color:red;">
               not
             </div>
             
@@ -46,20 +47,17 @@
             
             
                  <td class="text-center">
-                    <%= link_to "file", pdfconvert.attachment_url, class: "btn btn-default", target: "_blank" %>
+                    <%= link_to "file", pdfget.attachment_url, class: "btn btn-default", target: "_blank" %>
                     </td>
-            
-           <td class="text-center">
-            <%= link_to  "copyfish", pdfconvert , class: "btn btn-default" %>
-           </td>
+
            
            <td class="text-center">
-            <%= link_to  "done", edit_pdfconvert_path(pdfconvert) , class: "btn btn-default" %>
+            <%= link_to  "done", edit_pdfget_path(pdfget) , class: "btn btn-default" %>
 
            </td>
 
            <td class="text-center">
-            <%= link_to  "delete", pdfconvert ,method: :delete, data: { confirm: "Are you sure？" }, class: "btn btn-default" %>
+            <%= link_to  "delete", pdfget ,method: :delete, data: { confirm: "Are you sure？" }, class: "btn btn-default" %>
            </td>
            
        
@@ -82,8 +80,4 @@
 
 
 
-<%= link_to "New PDF File", new_pdfconvert_url , class: "btn btn-primary" %>
-
-
-
-<%= link_to "upload excel file", new_pdfget_url , class: "btn btn-primary" %>
+<%= link_to "New Excel File", new_pdfget_url , class: "btn btn-primary" %>

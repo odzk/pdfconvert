@@ -1,0 +1,272 @@
+ <%
+
+@url2 = "1"
+
+if params[:utf8] == "✓"
+@url2 = params[:name].to_s
+else
+@url2 = "1"
+end
+
+
+@url3 = @pdfconvert.attachment.to_s
+@url = @url3 + "#page=" + @url2
+
+
+ %>
+
+
+
+
+<div class="padding1-20"> 
+<%= form_tag( "#" , method: "get") do %>
+<%= label_tag :name, "page" %>
+<%= text_field_tag :name, params[:name] %>
+<%= submit_tag "search" %>
+<% end %>
+</div>
+
+<br>
+
+now is page
+
+<%= 
+unless params[:name].blank?
+
+params[:name].to_s
+else
+ "1"
+end
+
+%>
+
+
+
+
+<br><br>
+
+
+
+<!--１会社-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+ 
+
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-525px; /* 表示位置: y 増やせば右に*/
+margin-top:-305px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+
+<!--2パーラー店-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+   
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-435px; /* 表示位置: y 増やせば右に*/
+margin-top:-435px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+
+<!--3パーラー住所-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+   
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-435px; /* 表示位置: y 増やせば右に*/
+margin-top:-470px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+<!--４メーカー会社-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+   
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-435px; /* 表示位置: y 増やせば右に*/
+margin-top:-525px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+<!--5メーカー機器-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+   
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-435px; /* 表示位置: y 増やせば右に*/
+margin-top:-550px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+
+
+
+
+<!--６-->
+<div style="
+
+ width:130px; /*表示幅*/
+ height:220px; /*表示高さ*/
+ margin: 0 auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+ 
+">
+
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-430px; /* 表示位置: y 増やせば右に*/
+margin-top:-630px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+<br>
+
+
+<!--7機器１-->
+<div style="
+
+ width:130px; /*表示幅*/
+ height:220px; /*表示高さ*/
+ margin: 0 auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+ 
+">
+
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-605px; /* 表示位置: y 増やせば右に*/
+margin-top:-630px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+<br>
+
+<!--8確認１-->
+<div style="
+
+ width:130px; /*表示幅*/
+ height:220px; /*表示高さ*/
+ margin: 0 auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+ 
+">
+
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-770px; /* 表示位置: y 増やせば右に*/
+margin-top:-630px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+
+
+<!--９パーラー会社-->
+<div style="
+
+ width:300px; /*表示幅*/
+ height:25px; /*表示高さ*/
+ margin: 0px auto; /*左右中央揃え*/
+ overflow: hidden; /*はみ出た部分を非表示*/
+">
+   
+<object data=<%= @url %> type="application/pdf" style="
+
+width: 1200px; /*<div> より大きく*/
+height: 1200px; /*<div> より大きく*/
+margin-left:-435px; /* 表示位置: y 増やせば右に*/
+margin-top:-375px; /*表示位置:ｘ増やせば下に*/
+overflow: hidden;
+border:none;
+
+" ></object>
+
+</div>
+
+<br><br><br><br>
+
+
+<a href="/pdfconverts">BACK TO TOP<a>

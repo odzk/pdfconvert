@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171026054322) do
+ActiveRecord::Schema.define(version: 20171031143243) do
 
   create_table "pdfconverts", force: :cascade do |t|
     t.string "name"
     t.string "status"
     t.string "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pdfgets", force: :cascade do |t|
+    t.string "attachment"
+    t.string "name"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
